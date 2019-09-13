@@ -1,5 +1,6 @@
 #define ERRO_PILHA_CHEIA -1
 #define ERRO_PILHA_VAZIA -2
+#include "PilhaGenerica.c"
 
 typedef struct{
     void **dados;

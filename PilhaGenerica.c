@@ -43,7 +43,7 @@ int le_topo(PilhaGenerica p, void *info) {
     return 1; // Sucesso
 }
 
-void mostra_pilha(PilhaGenerica p, void (*mostra)(void *dados) ) {
+int mostra_pilha(PilhaGenerica p, void (*mostra)(void *dados) ) {
     if(pilha_vazia(p))
         printf("Pilha vazia!\n");
     else
@@ -59,20 +59,4 @@ void desaloca_pilha(PilhaGenerica *p) {
         free(p->dados[i]); // Libera a memória dos dados em si.
         free(p->dados); // Libera a memória do vetor de ponteiros.
     }
-}
-
-void mostra_char(void *x) {
-    char *p = x;
-    printf("%c\n", *p);
-}
-
-int main() {
-    PilhaGenerica p1;
-    inicializa_pilha(&p1, 10, sizeof(char));
-    char = 'a';
-    empilha(&p1, &x);
-    x = 'b';
-    empilha(&p1, &x);
-    mostra_pilha(p1, mostra_char);
-    printf("%d\n", mostra_char);
 }
